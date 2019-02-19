@@ -14,20 +14,20 @@ btnMul = QPushButton("Multiply", widget)
 
 #txtArea = QPlainTextEdit("Text To Edit", widget)widget.resize
 
-txtArea1 = QLineEdit("", widget)
-txtArea2 = QLineEdit("", widget)
+txtBodyWeight = QLineEdit("Body Weight (in LBS)", widget)
+txtActivityLevel = QLineEdit("Activity Level", widget)
 
 def init():
 
     widget.resize(300, 300)
     widget.move(300, 300)
-    widget.setWindowTitle('Calculator')
+    widget.setWindowTitle('Macro Calculator')
     widget.show()
 
-    txtArea1.move(20,10)
-    txtArea1.show()
-    txtArea2.move(20,60)
-    txtArea2.show()
+    txtBodyWeight.move(90,10)
+    txtBodyWeight.show()
+    txtActivityLevel.move(90,60)
+    txtActivityLevel.show()
 
     label.setText("")
     label.move(20,110)
@@ -55,26 +55,26 @@ def init():
 
 
 def addition():
-    num1 = int(txtArea1.text())
-    num2 = int(txtArea2.text())
+    num1 = int(txtBodyWeight.text())
+    num2 = int(txtActivityLevel.text())
     label.setFixedWidth(200)
     label.setText("Addition: "+str(num1 + num2))
 
 def subtraction():
-    num1 = int(txtArea1.text())
-    num2 = int(txtArea2.text())
+    num1 = int(txtBodyWeight.text())
+    num2 = int(txtActivityLevel.text())
     label.setFixedWidth(200)
     label.setText("Subtraction: "+str(num1 - num2))
 
 def multiplication():
-    num1 = int(txtArea1.text())
-    num2 = int(txtArea2.text())
+    num1 = int(txtBodyWeight.text())
+    num2 = int(txtActivityLevel.text())
     label.setFixedWidth(200)
     label.setText("Multiplication: "+str(num1 * num2))
 
 def division():
-    num1 = int(txtArea1.text())
-    num2 = int(txtArea2.text())
+    num1 = int(txtBodyWeight.text())
+    num2 = int(txtActivityLevel.text())
     label.setFixedWidth(200)
     label.setText("Division: "+str(num1 / num2))
 
